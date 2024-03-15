@@ -1,0 +1,33 @@
+﻿@model firstproj.Models.Student
+
+<h1>Edit Student-Management-Form</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Faculty"></label>
+        <select asp-for="Faculty" class="form-control">
+            <option value="">Select Faculty</option>
+            <option value="Civil">Civil</option>
+            <option value="Architecture">Architecture</option>
+            <option value="Computer">Computer</option>
+        </select>
+        <span asp-validation-for="Faculty" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="RollNO"></label>
+        <input asp-for="RollNO" class="form-control" />
+        <span asp-validation-for="RollNO" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Save Changes</button>
+</form>
